@@ -19,7 +19,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 // Replace with your real backend URL in prod
-const BACKEND_URL = "http://localhost:3001";
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 export default function HomePage() {
   const [courses, setCourses] = useState<any[]>([]);
